@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiggu's Publication Journey</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        #game-container {
+            border: 3px solid #333;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            background: #000;
+        }
+        
+        canvas {
+            display: block;
+            border-radius: 7px;
+        }
+        
+        .game-info {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
+        
+        .game-info h1 {
+            margin: 0;
+            font-size: 24px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .game-info p {
+            margin: 10px 0;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="game-container"></div>
+        <div class="game-info">
+            <h1>Snigdha's journey to becoming a 1st author!</h1>
+            <p>Navigate the challenging path from research to publication</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.70.0/dist/phaser.min.js"></script>
+    <script src="js/scenes/level-manager.js"></script>
+    <script src="js/scenes/boot.js"></script>
+    <script src="js/scenes/preloader.js"></script>
+    <script src="js/scenes/main-menu.js"></script>
+    <script src="js/scenes/game-scene.js"></script>
+    <script src="js/scenes/game-over.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
