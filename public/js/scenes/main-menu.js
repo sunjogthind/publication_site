@@ -27,6 +27,9 @@ class MainMenuScene extends Phaser.Scene {
         }).setOrigin(0.5);
 
         const description = [
+            '',
+            '',
+            '',
             'Navigate through 5 challenging levels representing',
             'the academic publication process:',
             '',

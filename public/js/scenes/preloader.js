@@ -8,6 +8,9 @@ class PreloaderScene extends Phaser.Scene {
         // Load player image
         this.load.image('player_image', '/assets/images/player.png');
         
+        // Load background image
+        this.load.image('background', '/assets/images/background.png');
+        
         this.createShapes();
     }
 

@@ -104,7 +104,7 @@ class GameOverScene extends Phaser.Scene {
         const height = this.cameras.main.height;
 
         if (this.success && this.finalLevel) {
-            const playAgainButton = this.add.text(width / 2, height - 100, 'PLAY AGAIN', {
+            const playAgainButton = this.add.text(width / 2, height - 130, 'PLAY AGAIN', {
                 fontSize: '24px',
                 fill: '#ffffff',
                 fontStyle: 'bold',
@@ -115,6 +115,29 @@ class GameOverScene extends Phaser.Scene {
             this.makeButtonInteractive(playAgainButton, () => {
                 this.resetGame();
                 this.scene.start('MainMenuScene');
+            });
+            
+            const readPaperButton = this.add.text(width / 2, height - 80, 'READ THE PAPER', {
+                fontSize: '24px',
+                fill: '#00FFFF',
+                fontStyle: 'bold',
+                stroke: '#006666',
+                strokeThickness: 3
+            }).setOrigin(0.5);
+            
+            // Add a special glow effect to the button
+            this.tweens.add({
+                targets: readPaperButton,
+                alpha: 0.8,
+                yoyo: true,
+                repeat: -1,
+                ease: 'Sine.easeInOut',
+                duration: 800
+            });
+
+            this.makeButtonInteractive(readPaperButton, () => {
+                // Open URL in a new tab/window
+                window.open('https://www.tandfonline.com/doi/full/10.1080/02770903.2025.2531499', '_blank');
             });
         } else if (this.success) {
             const continueButton = this.add.text(width / 2 - 100, height - 100, 'CONTINUE', {
